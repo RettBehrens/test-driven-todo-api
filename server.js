@@ -57,7 +57,7 @@ app.get('/api/todos', function index(req, res) {
 var i = 3;
 app.post('/api/todos', function create(req, res) {
   var newTodo = {"_id": req.body._id, "task": req.body.task, "description": req.body.description};
-  newTodo._id = (i++);
+  newTodo._id = (++i);
   res.json(newTodo);
 });
 
